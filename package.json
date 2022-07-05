@@ -1,0 +1,24 @@
+{
+  "name": "questdirect",
+  "version": "1.0.0",
+  "description": "Demo TestCases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarthak",
+  "license": "ISC",
+  "dependencies": {
+    "@types/es6-promise": "^3.3.0",
+    "@types/jasmine": "3.3.5",
+    "@types/jasminewd2": "^2.0.6",
+    "@types/node": "10.12.18",
+    "jasmine": "^3.3.1",
+    "protractor": "^7.0.0",
+    "ts-node": "^7.0.1",
+    "typescript": "~3.2.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.1.1"
+  }
+}
