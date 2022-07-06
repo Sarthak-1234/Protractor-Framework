@@ -1,6 +1,9 @@
 import {Given, When, Then} from "cucumber";
 import {calculator} from "../pageObjects/calculator";
 import {browser, element, by} from "protractor";
+import chai from "chai";
+var expect=chai.expect;
+
 let calc = new calculator();
 
 Given('I will navigate to Calc website', async ()=> {
@@ -25,6 +28,7 @@ Given('I will navigate to Calc website', async ()=> {
     //return 'pending';
     await calc.goResult.getText().then(function(text){
         console.log(text);
+        expect(text).to.equal(string);
     })
   });
 

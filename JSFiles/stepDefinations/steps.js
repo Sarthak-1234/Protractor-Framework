@@ -8,10 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const cucumber_1 = require("cucumber");
 const calculator_1 = require("../pageObjects/calculator");
 const protractor_1 = require("protractor");
+const chai_1 = __importDefault(require("chai"));
+var expect = chai_1.default.expect;
 let calc = new calculator_1.calculator();
 (0, cucumber_1.Given)('I will navigate to Calc website', () => __awaiter(void 0, void 0, void 0, function* () {
     // Write code here that turns the phrase above into concrete actions
@@ -30,5 +35,6 @@ let calc = new calculator_1.calculator();
     //return 'pending';
     yield calc.goResult.getText().then(function (text) {
         console.log(text);
+        expect(text).to.equal(string);
     });
 }));

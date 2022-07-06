@@ -11,6 +11,7 @@ export let config: Config = {
     },
     specs: ['../features/testspec.feature'],
     cucumberOpts: {
+        tags:"@demo",
         require: [
             './stepDefinations/*.js'
         ]
